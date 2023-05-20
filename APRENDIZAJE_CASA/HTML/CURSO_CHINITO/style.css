@@ -1,0 +1,58 @@
+body{
+    background-color: coral;
+    font-family: 'Roboto', sans-serif;
+}
+
+h1 ,h2 ,h3, h4, h5, h6{
+    text-align: center;
+}
+p{
+    color: white;
+    /* font-size: 24px; */
+}
+
+div h2{
+    color: aqua;
+}
+
+
+/* a los ids se accede mediante el simbolo # */
+#parrafo-especial{
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+
+/* a las clases se accede mediante el simbolo . */
+.parrafo{
+    color: blue;
+    font-style: italic;
+}
+
+a, img{
+    display: block;
+}
+
+
+/* margin va a darle un margen, lo que va a hacer
+es que va a dar el espacio asignado en las 4
+direcciones */
+a{
+    margin: 50px 20px;
+    text-decoration: none;
+    color: black;
+}
+
+
+/* hover es como un selector que lo que hace es que
+cuando se le pasa en cursor por encima va a hacer 
+algo, como cambiar de color o una animacion */
+
+a:hover{
+    color: aqua;
+}
+
+img{
+    width: 70%;
+    margin: auto;
+}
