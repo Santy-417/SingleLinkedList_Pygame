@@ -190,23 +190,31 @@ while running:
                 color_n6 = BLUE
                 selec_number = 6
 
+# permitir añadir numeros pares al inicio y permitir eliminar numeros impares al final
         # En esta parte lo que se hace es validar la posicion del mouse en los metodos
         if event.type == pygame.MOUSEBUTTONDOWN and event.button == 1:
             mouse_posicion = pygame.mouse.get_pos()
             if Button_AddFisrt.collidepoint(mouse_posicion):
-                if selec_number is not None:
-                    image = number_images.get(selec_number)
-                    linked_list.add_first(selec_number, image)
+                if selec_number %2 == 0:
+                    if selec_number is not None:
+                        image = number_images.get(selec_number)
+                        linked_list.add_first(selec_number, image)
             if Button_AddLast.collidepoint(mouse_posicion):
-                if selec_number == 3:
+                # if selec_number == 3:
                     if selec_number is not None:
                         image = number_images.get(selec_number)
                         linked_list.add_last(selec_number, image)
             elif Button_RemoveFirst.collidepoint(mouse_posicion):
-                if linked_list.head is not None and linked_list.head.value %2 !=0:
+                if linked_list.head is not None:# and linked_list.head.value %2 !=0
                     linked_list.remove_first()
             elif Button_RemoveLast.collidepoint(mouse_posicion):
-                linked_list.remove_last()
+                if linked_list.head is not None:
+                    last_node = linked_list.head
+                    while last_node.next is not None:
+                        last_node = last_node.next
+                    last_value = last_node.value
+                    if last_value % 2 !=0:
+                        linked_list.remove_last()
 
     text_title = font.render("SINGLE LINKED LIST WITH PYGAME", True, BLACK)# TITLE del programa
     text_informacion = font.render("Selecione un número y luego un metodo para poder agregarlo a la lista.",True,BLACK)# Instrucciones de uso
