@@ -149,10 +149,11 @@ while running:
                 if selec_number is not None:
                     image = number_images.get(selec_number)
                     linked_list.add_first(selec_number, image)
-            elif Button_AddLast.collidepoint(mouse_posicion):
-                if selec_number is not None:
-                    image = number_images.get(selec_number)
-                    linked_list.add_last(selec_number, image)
+            if Button_AddLast.collidepoint(mouse_posicion):
+                if selec_number == 3:
+                    if selec_number is not None:
+                        image = number_images.get(selec_number)
+                        linked_list.add_last(selec_number, image)
             elif Button_RemoveFirst.collidepoint(mouse_posicion):
                 linked_list.remove_first()
             elif Button_RemoveLast.collidepoint(mouse_posicion):
@@ -210,8 +211,3 @@ while running:
     clock.tick(60)# Definimos que tan rapido queremos que se actualice la pantalla
 
 pygame.quit()# Finalizar el programa 
-
-#Button_AddFisrt_text_rect = Button_AddFisrt_text.get_rect(center=Button_AddFisrt.center)
-""" calcula y guarda en la variable Button_AddLast_text_rect el 
-    rectángulo que representa la posición y el tamaño del texto 
-    renderizado, centrándolo dentro del rectángulo del botón. """
