@@ -87,9 +87,12 @@ Button_RemoveLast = pygame.Rect(650, 300, 150, 50)# Posicion del cuarto boton(4)
 Button_RemoveLast_color = BLUE
 
 # Crear los botones que contienen los numeros
-numero_1 = pygame.Rect(330, 175, 50, 50)
-numero_2 = pygame.Rect(430, 175, 50, 50)
-numero_3 = pygame.Rect(530, 175, 50, 50)
+numero_1 = pygame.Rect(130, 175, 50, 50)
+numero_2 = pygame.Rect(230, 175, 50, 50)
+numero_3 = pygame.Rect(330, 175, 50, 50)
+numero_4 = pygame.Rect(430, 175, 50, 50)
+numero_5 = pygame.Rect(530, 175, 50, 50)
+numero_6 = pygame.Rect(630, 175, 50, 50)
 
 # Crear la barra que va a contiene la actualizacion de la lista
 barra_estado_lista = pygame.Rect(100, 410, 700, 80)
@@ -98,24 +101,36 @@ barra_estado_lista = pygame.Rect(100, 410, 700, 80)
 numero1_img = pygame.image.load(("C:\\Users\\Asus-PC\\Documents\\Escritorio\\Programacion_2\\TRABAJO_PROPUESTA_PYGAME\\Imagen_1.jpg"))
 numero2_img = pygame.image.load(("C:\\Users\\Asus-PC\\Documents\\Escritorio\\Programacion_2\\TRABAJO_PROPUESTA_PYGAME\\Imagen_2.jpg"))
 numero3_img = pygame.image.load(("C:\\Users\\Asus-PC\\Documents\\Escritorio\\Programacion_2\\TRABAJO_PROPUESTA_PYGAME\\Imagen_3.jpg"))
+numero4_img = pygame.image.load(("C:\\Users\\Asus-PC\\Documents\\Escritorio\\Programacion_2\\TRABAJO_PROPUESTA_PYGAME\\Imagen_4.jpg"))
+numero5_img = pygame.image.load(("C:\\Users\\Asus-PC\\Documents\\Escritorio\\Programacion_2\\TRABAJO_PROPUESTA_PYGAME\\Imagen_5.jpg"))
+numero6_img = pygame.image.load(("C:\\Users\\Asus-PC\\Documents\\Escritorio\\Programacion_2\\TRABAJO_PROPUESTA_PYGAME\\Imagen_6.jpg"))
 
 # Escalar las imagenes al tamaño del boton
 numero1_img = pygame.transform.scale(numero1_img, (numero_1.width, numero_1.height))
 numero2_img = pygame.transform.scale(numero2_img, (numero_2.width, numero_2.height))
 numero3_img = pygame.transform.scale(numero3_img, (numero_3.width, numero_3.height))
+numero4_img = pygame.transform.scale(numero4_img, (numero_4.width, numero_4.height))
+numero5_img = pygame.transform.scale(numero5_img, (numero_5.width, numero_5.height))
+numero6_img = pygame.transform.scale(numero6_img, (numero_6.width, numero_6.height))
 
 # Inicializar el bucle, los colores y la seleccion de los los numeros
 running = True
 color_n1 = BLACK
 color_n2 = BLACK
 color_n3 = BLACK
+color_n4 = BLACK
+color_n5 = BLACK
+color_n6 = BLACK
 selec_number = 0
 
 # Crear un diccionario que va a contener las imagenes, ya que de esta manera me parecio que es mas facil acceder a ellas
 number_images = {
     1: numero1_img,# Imagen 1
     2: numero2_img,# Imagen 2
-    3: numero3_img# Imagen 3
+    3: numero3_img,# Imagen 3
+    4: numero4_img,# Imagen 3
+    5: numero5_img,# Imagen 3
+    6: numero6_img # Imagen 3
 }
 
 # Bucle principal del juego
@@ -130,17 +145,50 @@ while running:
                 color_n1 = BLUE   
                 color_n2 = BLACK
                 color_n3 = BLACK
+                color_n4 = BLACK
+                color_n5 = BLACK
+                color_n6 = BLACK
                 selec_number = 1
             elif numero_2.collidepoint(mouse_posicion):
-                color_n1 = BLACK
+                color_n1 = BLACK   
                 color_n2 = BLUE
                 color_n3 = BLACK
+                color_n4 = BLACK
+                color_n5 = BLACK
+                color_n6 = BLACK
                 selec_number = 2
             elif numero_3.collidepoint(mouse_posicion):
-                color_n1 = BLACK
+                color_n1 = BLACK   
                 color_n2 = BLACK
                 color_n3 = BLUE
+                color_n4 = BLACK
+                color_n5 = BLACK
+                color_n6 = BLACK
                 selec_number = 3
+            elif numero_4.collidepoint(mouse_posicion):
+                color_n1 = BLACK   
+                color_n2 = BLACK
+                color_n3 = BLACK
+                color_n4 = BLUE
+                color_n5 = BLACK
+                color_n6 = BLACK
+                selec_number = 4
+            elif numero_5.collidepoint(mouse_posicion):
+                color_n1 = BLACK   
+                color_n2 = BLACK
+                color_n3 = BLACK
+                color_n4 = BLACK
+                color_n5 = BLUE
+                color_n6 = BLACK
+                selec_number = 5
+            elif numero_6.collidepoint(mouse_posicion):
+                color_n1 = BLACK   
+                color_n2 = BLACK
+                color_n3 = BLACK
+                color_n4 = BLACK
+                color_n5 = BLACK
+                color_n6 = BLUE
+                selec_number = 6
 
         # En esta parte lo que se hace es validar la posicion del mouse en los metodos
         if event.type == pygame.MOUSEBUTTONDOWN and event.button == 1:
@@ -155,7 +203,8 @@ while running:
                         image = number_images.get(selec_number)
                         linked_list.add_last(selec_number, image)
             elif Button_RemoveFirst.collidepoint(mouse_posicion):
-                linked_list.remove_first()
+                if linked_list.head is not None and linked_list.head.value %2 !=0:
+                    linked_list.remove_first()
             elif Button_RemoveLast.collidepoint(mouse_posicion):
                 linked_list.remove_last()
 
@@ -193,11 +242,18 @@ while running:
     pygame.draw.rect(screen, WHITE,  barra_estado_lista, 0) # Dibuja el rectangulo donde se renderiza y actualiza la lista
 
     pygame.draw.rect(screen, color_n1, numero_1, 0)# Dibuja los rectangulos en donde se encuentras las imagenes de los numero (imagne1)
-    screen.blit(numero1_img, (335, 180))
+    screen.blit(numero1_img, (135, 180))
     pygame.draw.rect(screen, color_n2, numero_2, 0)# Dibuja los rectangulos en donde se encuentras las imagenes de los numero (imagne2)
-    screen.blit(numero2_img, (435, 180))
+    screen.blit(numero2_img, (235, 180))
     pygame.draw.rect(screen, color_n3, numero_3, 0)# Dibuja los rectangulos en donde se encuentras las imagenes de los numero (imagne3)
-    screen.blit(numero3_img, (535, 180))
+    screen.blit(numero3_img, (335, 180))
+    pygame.draw.rect(screen, color_n4, numero_4, 0)# Dibuja los rectangulos en donde se encuentras las imagenes de los numero (imagne4)
+    screen.blit(numero4_img, (435, 180))
+    pygame.draw.rect(screen, color_n5, numero_5, 0)# Dibuja los rectangulos en donde se encuentras las imagenes de los numero (imagne5)
+    screen.blit(numero5_img, (535, 180))
+    pygame.draw.rect(screen, color_n6, numero_6, 0)# Dibuja los rectangulos en donde se encuentras las imagenes de los numero (imagne6)
+    screen.blit(numero6_img, (635, 180))
+
 
     espacio = 0# Inicializar un contador que nos permite darle espacio a la imagenes 
     current_node = linked_list.head# Inicializar current_node como la cabeza de la lista, ya que vamos a renderizar el primer numero que se seleccione
