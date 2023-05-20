@@ -32,5 +32,3 @@ class Recorridolistas:
             )
         else:
             print('No ingreso un numero.')                
-
-    agregarValoreslista()

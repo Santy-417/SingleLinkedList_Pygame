@@ -154,7 +154,7 @@ class Listas:
                         print(self.lista_animales[-4:-1])
                     else:
                         print(" La lsita tiene mas de 3 elementos. ")
-                    break
+                        break
                 else:
                     print(self.lista_animales[-1])
                     break
@@ -162,4 +162,5 @@ class Listas:
                 print(" Valor incorrecto")
                 break
 
-# crear_animales()
+listas = Listas()
+listas.menu_opciones()

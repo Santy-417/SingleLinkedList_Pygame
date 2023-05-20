@@ -7,34 +7,34 @@ pygame.init()
 w,h = 1000,600
 pantalla = pygame.display.set_mode((w,h))
 pygame.display.set_caption("Exterminador")
-icono = pygame.image.load(('D:\\Documents\\Desktop\\Programacion_2\\GAME\\img\\icono.png'))
+icono = pygame.image.load(('C:\\Users\\Asus-PC\\Documents\\Escritorio\\Programacion_2\\GAME\\img\\icono.png'))
 pygame.display.set_icon(icono)
 
 
 #fondo del juego
-fondo = pygame.image.load(('D:\\Documents\\Desktop\\Programacion_2\\GAME\\img\\fondo.png')).convert()
+fondo = pygame.image.load(('C:\\Users\\Asus-PC\\Documents\\Escritorio\\Programacion_2\\GAME\\img\\fondo.png')).convert()
 
 
 #personaje
 
-quieto = pygame.image.load(('D:\\Documents\\Desktop\\Programacion_2\\GAME\\img\\idle1.png'))
+quieto = pygame.image.load(('C:\\Users\\Asus-PC\\Documents\\Escritorio\\Programacion_2\\GAME\\img\\idle1.png'))
 
-caminaDerecha = [pygame.image.load(('D:\\Documents\\Desktop\\Programacion_2\\GAME\\img\\run1.png')),
-                pygame.image.load(('D:\\Documents\\Desktop\\Programacion_2\\GAME\\img\\run2.png')),
-                pygame.image.load(('D:\\Documents\\Desktop\\Programacion_2\\GAME\\img\\run3.png')),
-                pygame.image.load(('D:\\Documents\\Desktop\\Programacion_2\\GAME\\img\\run4.png')),
-                pygame.image.load(('D:\\Documents\\Desktop\\Programacion_2\\GAME\\img\\run5.png')),
-                pygame.image.load(('D:\\Documents\\Desktop\\Programacion_2\\GAME\\img\\run6.png'))]
+caminaDerecha = [pygame.image.load(('C:\\Users\\Asus-PC\\Documents\\Escritorio\\Programacion_2\\GAME\\img\\run1.png')),
+                pygame.image.load(('C:\\Users\\Asus-PC\\Documents\\Escritorio\\Programacion_2\\GAME\\img\\run2.png')),
+                pygame.image.load(('C:\\Users\\Asus-PC\\Documents\\Escritorio\\Programacion_2\\GAME\\img\\run3.png')),
+                pygame.image.load(('C:\\Users\\Asus-PC\\Documents\\Escritorio\\Programacion_2\\GAME\\img\\run4.png')),
+                pygame.image.load(('C:\\Users\\Asus-PC\\Documents\\Escritorio\\Programacion_2\\GAME\\img\\run5.png')),
+                pygame.image.load(('C:\\Users\\Asus-PC\\Documents\\Escritorio\\Programacion_2\\GAME\\img\\run6.png'))]
 
-caminaIzquierda = [pygame.image.load(('D:\\Documents\\Desktop\\Programacion_2\\GAME\\img\\run1-izq.png')),
-                pygame.image.load(('D:\\Documents\\Desktop\\Programacion_2\\GAME\\img\\run2-izq.png')),
-                pygame.image.load(('D:\\Documents\\Desktop\\Programacion_2\\GAME\\img\\run3-izq.png')),
-                pygame.image.load(('D:\\Documents\\Desktop\\Programacion_2\\GAME\\img\\run4-izq.png')),
-                pygame.image.load(('D:\\Documents\\Desktop\\Programacion_2\\GAME\\img\\run5-izq.png')),
-                pygame.image.load(('D:\\Documents\\Desktop\\Programacion_2\\GAME\\img\\run6-izq.png'))]
+caminaIzquierda = [pygame.image.load(('C:\\Users\\Asus-PC\\Documents\\Escritorio\\Programacion_2\\GAME\\img\\run1-izq.png')),
+                pygame.image.load(('C:\\Users\\Asus-PC\\Documents\\Escritorio\\Programacion_2\\GAME\\img\\run2-izq.png')),
+                pygame.image.load(('C:\\Users\\Asus-PC\\Documents\\Escritorio\\Programacion_2\\GAME\\img\\run3-izq.png')),
+                pygame.image.load(('C:\\Users\\Asus-PC\\Documents\\Escritorio\\Programacion_2\\GAME\\img\\run4-izq.png')),
+                pygame.image.load(('C:\\Users\\Asus-PC\\Documents\\Escritorio\\Programacion_2\\GAME\\img\\run5-izq.png')),
+                pygame.image.load(('C:\\Users\\Asus-PC\\Documents\\Escritorio\\Programacion_2\\GAME\\img\\run6-izq.png'))]
 
-caminaIzquierda = [pygame.image.load(('D:\\Documents\\Desktop\\Programacion_2\\GAME\\img\\jump1.png')),
-                pygame.image.load(('D:\\Documents\\Desktop\\Programacion_2\\GAME\\img\\jump2.png'))]
+caminaIzquierda = [pygame.image.load(('C:\\Users\\Asus-PC\\Documents\\Escritorio\\Programacion_2\\GAME\\img\\jump1.png')),
+                pygame.image.load(('C:\\Users\\Asus-PC\\Documents\\Escritorio\\Programacion_2\\GAME\\img\\jump2.png'))]
 
 x = 0
 px = 50

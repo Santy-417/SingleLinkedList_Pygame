@@ -2,11 +2,12 @@ import random
 import string
 
 def generar_contrasena(longitud):
-
     caracteres = string.ascii_letters + string.digits + string.punctuation
-    contrasena = ''.join(random.choice(caracteres) for i in range(longitud))
+    contrasena = ''.join(random.choice(caracteres) for _ in range(longitud))
+    return contrasena
 
-longitud = str(input("Ingrese la longitud de la contraseña: "))
+longitud_deseada = int(input(" Ingrese la longitud para la contraseña: "))
 
-contrasena = generar_contrasena(longitud)
-print("Contraseña generada: ", contrasena)
+contrasena_generada = generar_contrasena(longitud_deseada)
+
+print(" La contraseña es: ", contrasena_generada)

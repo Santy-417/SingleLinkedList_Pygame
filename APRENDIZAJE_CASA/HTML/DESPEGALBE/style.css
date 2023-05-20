@@ -28,6 +28,7 @@ body {
 }
 
 .card:hover{
+    cursor: pointer;
     transform: translateX(50%);
 }
 
