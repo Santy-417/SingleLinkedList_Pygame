@@ -98,12 +98,12 @@ numero_6 = pygame.Rect(630, 175, 50, 50)
 barra_estado_lista = pygame.Rect(100, 410, 700, 80)
 
 # Cargar las imagenes de los numeros
-numero1_img = pygame.image.load(("C:\\Users\\Asus-PC\\Documents\\Escritorio\\Programacion_2\\TRABAJO_PROPUESTA_PYGAME\\RepositorioGit_Proyecto\\Imagen_1.jpg"))
-numero2_img = pygame.image.load(("C:\\Users\\Asus-PC\\Documents\\Escritorio\\Programacion_2\\TRABAJO_PROPUESTA_PYGAME\\RepositorioGit_Proyecto\\Imagen_2.jpg"))
-numero3_img = pygame.image.load(("C:\\Users\\Asus-PC\\Documents\\Escritorio\\Programacion_2\\TRABAJO_PROPUESTA_PYGAME\\RepositorioGit_Proyecto\\Imagen_3.jpg"))
-numero4_img = pygame.image.load(("C:\\Users\\Asus-PC\\Documents\\Escritorio\\Programacion_2\\TRABAJO_PROPUESTA_PYGAME\\RepositorioGit_Proyecto\\Imagen_4.jpg"))
-numero5_img = pygame.image.load(("C:\\Users\\Asus-PC\\Documents\\Escritorio\\Programacion_2\\TRABAJO_PROPUESTA_PYGAME\\RepositorioGit_Proyecto\\Imagen_5.jpg"))
-numero6_img = pygame.image.load(("C:\\Users\\Asus-PC\\Documents\\Escritorio\\Programacion_2\\TRABAJO_PROPUESTA_PYGAME\\RepositorioGit_Proyecto\\Imagen_6.jpg"))
+numero1_img = pygame.image.load(("C:\\Users\\Asus-PC\\Documents\\Escritorio\\Programacion_2\\TRABAJO_PROPUESTA_PYGAME\\RepositorioGit_Proyecto\\SingleLinkedList_Pygame\\Imagen_1.jpg"))
+numero2_img = pygame.image.load(("C:\\Users\\Asus-PC\\Documents\\Escritorio\\Programacion_2\\TRABAJO_PROPUESTA_PYGAME\\RepositorioGit_Proyecto\\SingleLinkedList_Pygame\\Imagen_2.jpg"))
+numero3_img = pygame.image.load(("C:\\Users\\Asus-PC\\Documents\\Escritorio\\Programacion_2\\TRABAJO_PROPUESTA_PYGAME\\RepositorioGit_Proyecto\\SingleLinkedList_Pygame\\Imagen_3.jpg"))
+numero4_img = pygame.image.load(("C:\\Users\\Asus-PC\\Documents\\Escritorio\\Programacion_2\\TRABAJO_PROPUESTA_PYGAME\\RepositorioGit_Proyecto\\SingleLinkedList_Pygame\\Imagen_4.jpg"))
+numero5_img = pygame.image.load(("C:\\Users\\Asus-PC\\Documents\\Escritorio\\Programacion_2\\TRABAJO_PROPUESTA_PYGAME\\RepositorioGit_Proyecto\\SingleLinkedList_Pygame\\Imagen_5.jpg"))
+numero6_img = pygame.image.load(("C:\\Users\\Asus-PC\\Documents\\Escritorio\\Programacion_2\\TRABAJO_PROPUESTA_PYGAME\\RepositorioGit_Proyecto\\SingleLinkedList_Pygame\\Imagen_6.jpg"))
 
 # Escalar las imagenes al tamaño del boton
 numero1_img = pygame.transform.scale(numero1_img, (numero_1.width, numero_1.height))
