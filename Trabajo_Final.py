@@ -85,9 +85,9 @@ add_first_button_rect = pygame.Rect(50, 300, 150, 50)# Posicion del primer boton
 add_first_button_color = AZUL
 add_last_button_rect = pygame.Rect(50 + 150 + 50, 300, 150, 50)# Posicion del segundo boton sumandole las dimenciones del primer boton para que quede al lado de el
 add_last_button_color = AZUL
-remove_first_button_rect = pygame.Rect(50 + (150 + 50) * 2, 300, 150, 50)# Posicion del tercer boton añadiendole el calculo de *2 para que quede en el espacio 3 de boton 
+remove_first_button_rect = pygame.Rect(50 + 400, 300, 150, 50)# Posicion del tercer boton añadiendole el calculo de *2 para que quede en el espacio 3 de boton 
 remove_first_button_color = AZUL
-remove_last_button_rect = pygame.Rect(50 + (150 + 50) * 3, 300, 150, 50)# Posicion del cuarto boton añadiendole el calculo de *3 para que quede en el espacio 4 de boton
+remove_last_button_rect = pygame.Rect(50 + 600, 300, 150, 50)# Posicion del cuarto boton añadiendole el calculo de *3 para que quede en el espacio 4 de boton
 remove_last_button_color = AZUL
 
 # Crear los botones que contienen los numeros
